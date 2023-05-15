@@ -12,6 +12,9 @@
 
     <!-- TODO #1 - Use a loop to display job results in a table. -->
 <div>
+<!--    Create a new table each time filling it with the following data-->
+<!--  job: This is a variable name that you can use inside the loop to refer to each individual object-->
+<!--    jobs is the collection of objects from job and the template housing them ListController-->
     <table th:each="job: ${jobs}" class="job-listing">
 <!--Adding the CSS class "job-listing" to a table provides some nice styling, courtesy of Carly’s work!-->
 <!-- The th:each attribute is used to iterate over a list of Job
