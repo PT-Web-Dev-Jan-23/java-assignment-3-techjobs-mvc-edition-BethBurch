@@ -26,10 +26,12 @@ used and now populates an HTML table with the data -->
             <th>ID</th>
             <td th:text="${job.getId()}"></td>
 <!--Also Remember we are using the Getters from the Job Model class -->
+<!--the empty parentheses (), indicate that the getters are being brought in as methods rather than as fields.-->
             </tr>
         <tr>
             <th>Name</th>
             <td th:text="${job.getName()}"></td>
+<!-- ${job.getId()} calls the getId() method of the Job object to retrieve its ID value.-->
         </tr>
         <tr>
             <th>Employer</th>
