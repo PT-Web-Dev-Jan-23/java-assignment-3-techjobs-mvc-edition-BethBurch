@@ -37,6 +37,40 @@
     <hr />
 
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
+<!--You can reuse the code you just wrote in list-jobs.html by defining a new fragment in that file. Then you need to include that fragment in search.html.
+
+For the fragment to work properly in both files, the variables passed in by model.addAttribute() must use the same names.
+-->
+
+    <div>
+    <table th:each="job: ${jobs}" class="job-listing">
+        <tr>
+            <th>ID</th>
+            <td th:text="${job.getId()}"></td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td th:text="${job.getName()}"></td>
+
+        </tr>
+        <tr>
+            <th>Employer</th>
+            <td th:text="${job.getEmployer()}"></td>
+        </tr>
+        <tr>
+            <th>Location</th>
+            <td th:text="${job.getLocation()}"></td>
+        </tr>
+        <tr>
+            <th>Position Type</th>
+            <td th:text="${job.getPositionType()}"></td>
+        </tr>
+        <tr>
+            <th>Skill</th>
+            <td th:text="${job.getCoreCompetency()}"></td>
+        </tr>
+    </table>
+    </div>
 
 </div>
 
